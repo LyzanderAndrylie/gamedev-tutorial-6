@@ -30,6 +30,38 @@ func _on_ExitGame_pressed():
     get_tree().quit()
 ```
 
+## Fitur Select Stage
+
+Hal ini dapat dilakukan dengan membuat menu `SelectStage.tscn` terlebih dahulu. Pada menu ini, pemain dapat memilih level yang ingin dimainkan. Tampilan menu `SelectStage.tscn` adalah sebagai berikut.
+
+![Select Stage Menu](./screenshot/menu_select_stage.png)
+
+Pada menu ini, saya membuat scene baru, yaitu scene `LevelLinkButton` yang dapat mengarahkan pemain ke scene level tertentu sesuai dengan konfigurasi. Hal ini diperlukan untuk mendukung *reusability*. Berikut adalah implementasinya.
+
+`LevelLinkButton.gd`
+
+```py
+extends LinkButton
+
+export(PackedScene) var level_scene
+
+func _on_LevelLinkButton_pressed():
+    get_tree().change_scene_to(level_scene)
+```
+
+Kemudian, saya tinggal menghubungkan `LinkButton` Stage Select pada `MainMenu.tscn` ke scene di atas yang telah saya buat. Berikut adalah implementasi scriptnya.
+
+```py
+extends LinkButton
+
+var select_stage_scene = preload('res://scenes/SelectStage.tscn')
+
+func _on_StageSelect_pressed():
+    get_tree().change_scene_to(select_stage_scene)
+```
+
+Hasil dapat dilihat di [`./screenshot/select_stage.mp4`](./screenshot/select_stage.mp4)
+
 ## Sumber Referensi
 
-1. [Scene Tree](https://docs.godotengine.org/en/3.5/tutorials/scripting/scene_tree.html)
+1. [Scene Tree](https://media.giphy.com/media/vFKqnCdLPNOKc/giphy.gif)
