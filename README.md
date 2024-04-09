@@ -60,7 +60,7 @@ func _on_StageSelect_pressed():
     get_tree().change_scene_to(select_stage_scene)
 ```
 
-Hasil dapat dilihat di [`./screenshot/select_stage.mp4`](./screenshot/select_stage.mp4)
+Hasil video dapat dilihat di [`./screenshot/select_stage.mp4`](./screenshot/select_stage.mp4)
 
 ## Polishing
 
@@ -95,6 +95,23 @@ Pada tahap ini, saya memperbaiki dan menambahkan berbagai elemen agar tampilan m
     ![Hasil Merge script Main Menu](./screenshot/hasil_merge_main_menu.png)
 
     ![Hasil Merge script Game Over](./screenshot/hasil_merge_game_over.png)
+
+4. Meningkatkan layar menu, layar pemilihan level, dan layer game over.
+
+    Ada beberapa peningkatan yang dilakukan pada layar tersebut.
+
+    1. Menghilangkan underline dari setiap `LinkButton` yang ada.
+    2. Menambahkan animasi karakter pada layar menu dan layar game over.
+    3. Menambahkan background untuk masing-masing layar.
+    4. Menyesuaikan warna font dengan background.
+
+    Hasilnya adalah sebagai berikut.
+
+    ![Main Menu Polish](./screenshot/main_menu_polish.png)
+    ![Stage Select Menu Polish](./screenshot/select_stage_polish.png)
+    ![Game Over Menu Polish](./screenshot/game_over_polish.png)
+
+    Hasil video dapat dilihat di [`./screenshot/menu.mp4`](./screenshot/menu.mp4)
 
 ## Sumber Referensi
 
