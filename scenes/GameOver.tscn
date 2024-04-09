@@ -2,8 +2,8 @@
 
 [ext_resource path="res://assets/Fonts/CC_Wild_Word_Roman_Title.tres" type="DynamicFont" id=1]
 [ext_resource path="res://assets/Fonts/CC_Wild_Word_Roman_Medium.tres" type="DynamicFont" id=2]
-[ext_resource path="res://scenes/BackToMainMenu.gd" type="Script" id=3]
-[ext_resource path="res://scenes/ExitGame.gd" type="Script" id=4]
+[ext_resource path="res://scripts/BackToMainMenu.gd" type="Script" id=3]
+[ext_resource path="res://scripts/ExitGame.gd" type="Script" id=4]
 
 [node name="ColorRect" type="ColorRect"]
 anchor_right = 1.0
