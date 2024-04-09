@@ -62,6 +62,8 @@ func _on_StageSelect_pressed():
 
 Hasil video dapat dilihat di [`./screenshot/select_stage.mp4`](./screenshot/select_stage.mp4)
 
+https://github.com/LyzanderAndrylie/gamedev-tutorial-6/assets/107832263/db0e3b75-1172-4f6a-ae79-b3eebc8f0524
+
 ## Polishing
 
 Pada tahap ini, saya memperbaiki dan menambahkan berbagai elemen agar tampilan menjadi lebih menarik. Detailnya adalah sebagai berikut.
@@ -112,6 +114,8 @@ Pada tahap ini, saya memperbaiki dan menambahkan berbagai elemen agar tampilan m
     ![Game Over Menu Polish](./screenshot/game_over_polish.png)
 
     Hasil video dapat dilihat di [`./screenshot/menu.mp4`](./screenshot/menu.mp4)
+
+    https://github.com/LyzanderAndrylie/gamedev-tutorial-6/assets/107832263/0bc95431-3689-4850-a924-2db71311f46a
 
 ## Sumber Referensi
 
