@@ -62,6 +62,40 @@ func _on_StageSelect_pressed():
 
 Hasil dapat dilihat di [`./screenshot/select_stage.mp4`](./screenshot/select_stage.mp4)
 
+## Polishing
+
+Pada tahap ini, saya memperbaiki dan menambahkan berbagai elemen agar tampilan menjadi lebih menarik. Detailnya adalah sebagai berikut.
+
+1. Men-reset `global.lives` ketika pemain ingin mengulang permainan.
+
+    Hal ini dilakukan untuk memastikan `lives` dari pemain tidak 0 atau negatif ketika pemain mengulang permainan. Implementasi pada tutorial belum meng-*hanlde* kasus ini. Hasilnya adalah sebagai berikut.
+
+    `global.gd`
+
+    ```py
+    extends Node
+
+    const DEFAULT_LIVE = 3
+    var lives = DEFAULT_LIVE
+
+    func reset_player_lives():
+        lives = DEFAULT_LIVE
+    ```
+
+    fungsi `reset_player_lives()` akan dipanggil ketika pemain mengklik **New Game** atau **Stage Select** pada `MainMenu.tscn`.
+
+2. Menambahkan GUI `Lives.tscn` pada Level 2.
+
+    ![GUI Lives pada Level 2](./screenshot/level2_lives_gui.png)
+
+3. Menggabungkan script dari child ke parent script.
+
+    Hal ini diperlukan agar script tidak terlalu berantakan. Contohnya adalah script `NewGame.gd` dan `StageSelect.gd` dapat digabung menjadi `MainMenu.gd` dan script `BackToMainMenu.gd` dan `ExitGame.gd` dapat digabung menjadi `GameOver.gd`.
+
+    ![Hasil Merge script Main Menu](./screenshot/hasil_merge_main_menu.png)
+
+    ![Hasil Merge script Game Over](./screenshot/hasil_merge_game_over.png)
+
 ## Sumber Referensi
 
 1. [Scene Tree](https://media.giphy.com/media/vFKqnCdLPNOKc/giphy.gif)

@@ -1,14 +1,14 @@
-[gd_scene load_steps=5 format=2]
+[gd_scene load_steps=4 format=2]
 
 [ext_resource path="res://assets/Fonts/CC_Wild_Word_Roman_Title.tres" type="DynamicFont" id=1]
 [ext_resource path="res://assets/Fonts/CC_Wild_Word_Roman_Medium.tres" type="DynamicFont" id=2]
-[ext_resource path="res://scripts/BackToMainMenu.gd" type="Script" id=3]
-[ext_resource path="res://scripts/ExitGame.gd" type="Script" id=4]
+[ext_resource path="res://scripts/GameOver.gd" type="Script" id=5]
 
 [node name="ColorRect" type="ColorRect"]
 anchor_right = 1.0
 anchor_bottom = 1.0
 color = Color( 0.431373, 0.0980392, 0.0980392, 1 )
+script = ExtResource( 5 )
 
 [node name="MarginContainer" type="MarginContainer" parent="."]
 anchor_right = 1.0
@@ -51,7 +51,6 @@ margin_right = 495.0
 margin_bottom = 42.0
 custom_fonts/font = ExtResource( 2 )
 text = "Back To Main Menu"
-script = ExtResource( 3 )
 
 [node name="ExitGame" type="LinkButton" parent="MarginContainer/VBoxContainer/HBoxContainer/VBoxContainer"]
 margin_top = 72.0
@@ -60,7 +59,6 @@ margin_bottom = 114.0
 focus_mode = 2
 custom_fonts/font = ExtResource( 2 )
 text = "Exit Game"
-script = ExtResource( 4 )
 
-[connection signal="pressed" from="MarginContainer/VBoxContainer/HBoxContainer/VBoxContainer/BackToMainMenu" to="MarginContainer/VBoxContainer/HBoxContainer/VBoxContainer/BackToMainMenu" method="_on_BackToMainMenu_pressed"]
-[connection signal="pressed" from="MarginContainer/VBoxContainer/HBoxContainer/VBoxContainer/ExitGame" to="MarginContainer/VBoxContainer/HBoxContainer/VBoxContainer/ExitGame" method="_on_ExitGame_pressed"]
+[connection signal="pressed" from="MarginContainer/VBoxContainer/HBoxContainer/VBoxContainer/BackToMainMenu" to="." method="_on_BackToMainMenu_pressed"]
+[connection signal="pressed" from="MarginContainer/VBoxContainer/HBoxContainer/VBoxContainer/ExitGame" to="." method="_on_ExitGame_pressed"]
